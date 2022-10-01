@@ -10,7 +10,7 @@ Algoritmo getPromedioCalificaciones
 	para i <- 1 hasta numCalificaciones con paso 1 haces 
 		Escribir  "Escribe tu calificacion #", i
 		leer calificacion[i]
-		Si calificacion[i] > 10 o calificacion[i] < 5 Entonces
+		Si calificacion[i] > 10 y calificacion[i] < 5 Entonces
 			Escribir "Debes escribir una calificacion mayor a 4 y menor a 11 "
 			Escribir  "Escribe tu calificacion #", i
 			leer calificacion[i]
