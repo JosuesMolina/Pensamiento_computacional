@@ -1,0 +1,33 @@
+Algoritmo getPromedioCalificaciones
+	Definir totAlumnos Como Entero 
+	Definir calificacion Como Real
+	Definir promedio Como Real
+	numCalificaciones <- 1	
+	Escribir "Ingresa el total de alumnos a calcular su promedio"
+	Leer  totAlumnos 
+	Escribir "Ingresa el numero de calificaciones totales del periodo"
+	leer numCalificaciones 
+	
+	Dimension calificacion[numCalificaciones]
+	Para i <- 1 Hasta  totAlumnos Con Paso 1 Hacer	
+		Mostrar  "Calculando el promedio del alumno #",i
+		para j <- 1 hasta numCalificaciones con paso 1 haces 
+			Escribir  "Escribe tu calificacion #", j
+			leer calificacion[j]
+			Si calificacion[j] > 10 O calificacion[j] < 5 Entonces
+				Escribir "Debes escribir una calificacion valida dentro del siguiente rango 5 y 10"
+				Escribir  "Escribe tu calificacion #", j
+				leer calificacion[j]
+			Fin Si
+		FinPara
+		para j <- 1 Hasta  numCalificaciones Con Paso 1 haces
+			 promedio <-  calificacion[j] + promedio
+		 FinPara
+		 promedio <- (promedio)/numCalificaciones
+		 Mostrar  "---------------------------------------------------------------------"
+		 Mostrar "ALUMNO #",i " TU PROMEDIO DEL PERIODO ES DE:", promedio, " "
+		 Mostrar  "---------------------------------------------------------------------"
+	FinPara	
+		
+Mostrar  " "
+FinAlgoritmo
